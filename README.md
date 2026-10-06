@@ -124,17 +124,4 @@ Replayed Message
 
 ---
 
-# STEP 5: Save it
 
-After pasting:
-
-1. **Do not click Preview yet.**
-2. Scroll all the way to the **bottom of the page**.
-3. You'll see **Commit changes**.
-4. Click **Commit changes**.
-5. A small window will appear.
-6. Leave the commit message as the default, or use:
-
-```text
-Update CANShield project documentation
-     ACCEPT
