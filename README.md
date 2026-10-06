@@ -51,20 +51,28 @@ Legitimate ECU
       v         v
    ACCEPT     BLOCK
 
+Attack Scenarios
+1. Legitimate Message
 AUTHENTICATION: VALID
 FRESHNESS: VALID
 
 MESSAGE ACCEPTED
 
+
+2. Message Injection
 AUTHENTICATION: INVALID
 
 INJECTION BLOCKED
 
+
+3. Replay Attack
 AUTHENTICATION: VALID
 FRESHNESS: INVALID
 
 REPLAY BLOCKED
 
+
+Project Architecture
 ESP32 #1
 Legitimate ECU
       |
@@ -85,6 +93,9 @@ CAN Transceiver                                |
                                                v
                                          OLED Display
 
+
+Demonstration
+
 Legitimate Message
         |
         v
@@ -94,6 +105,8 @@ Legitimate Message
     Freshness
         |
         v
+       Accept
+
 Fake Message
      |
      v
@@ -122,6 +135,48 @@ Replayed Message
        v
      BLOCK
 
----
+
+## Objectives
+
+- Demonstrate CAN message authentication.
+- Detect unauthorized CAN message injection.
+- Detect replayed CAN messages.
+- Implement freshness verification using a counter mechanism.
+- Develop a low-cost proof-of-concept security gateway.
+- Demonstrate the security decision in real time.
+
+## Technology Stack
+
+- ESP32
+- CAN communication
+- CAN transceivers
+- Embedded C/C++
+- Cryptographic authentication
+- Freshness / counter mechanism
+- OLED display
+- Serial debugging
+- CAN bus monitoring
+
+## Future Scope
+
+The prototype can be extended toward:
+
+- Automotive-grade hardware
+- CAN-FD support
+- Hardware-based secure key storage
+- Advanced key management
+- Integration with automotive cybersecurity architectures
+- More sophisticated intrusion detection
+- Vehicle-level testing and validation
+
+## Project Status
+
+**Current Stage:** Prototype Development
+
+CANShield is being developed as an educational proof-of-concept to demonstrate CAN message authentication and replay protection using embedded hardware.
+
+## Team
+
+Developed as an ECE / embedded cybersecurity project.
 
 
