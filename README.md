@@ -50,3 +50,91 @@ Legitimate ECU
       |         |
       v         v
    ACCEPT     BLOCK
+
+AUTHENTICATION: VALID
+FRESHNESS: VALID
+
+MESSAGE ACCEPTED
+
+AUTHENTICATION: INVALID
+
+INJECTION BLOCKED
+
+AUTHENTICATION: VALID
+FRESHNESS: INVALID
+
+REPLAY BLOCKED
+
+ESP32 #1
+Legitimate ECU
+      |
+      v
+CAN Transceiver
+      |
+      +---------------- CAN BUS ----------------+
+                                               |
+ESP32 #3                                      |
+Attacker                                       |
+      |                                        |
+CAN Transceiver                                |
+                                               v
+                                    ESP32 #2
+                                    CANShield
+                                    Security Gateway
+                                               |
+                                               v
+                                         OLED Display
+
+Legitimate Message
+        |
+        v
+   Authentication
+        |
+        v
+    Freshness
+        |
+        v
+Fake Message
+     |
+     v
+Authentication
+     |
+     v
+   INVALID
+     |
+     v
+   BLOCK
+
+Replayed Message
+       |
+       v
+ Authentication
+       |
+       v
+     VALID
+       |
+       v
+ Freshness Check
+       |
+       v
+     INVALID
+       |
+       v
+     BLOCK
+
+---
+
+# STEP 5: Save it
+
+After pasting:
+
+1. **Do not click Preview yet.**
+2. Scroll all the way to the **bottom of the page**.
+3. You'll see **Commit changes**.
+4. Click **Commit changes**.
+5. A small window will appear.
+6. Leave the commit message as the default, or use:
+
+```text
+Update CANShield project documentation
+     ACCEPT
