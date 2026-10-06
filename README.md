@@ -136,7 +136,7 @@ Replayed Message
      BLOCK
 
 
-## Objectives
+ Objectives
 
 - Demonstrate CAN message authentication.
 - Detect unauthorized CAN message injection.
@@ -145,7 +145,7 @@ Replayed Message
 - Develop a low-cost proof-of-concept security gateway.
 - Demonstrate the security decision in real time.
 
-## Technology Stack
+ Technology Stack
 
 - ESP32
 - CAN communication
@@ -157,7 +157,7 @@ Replayed Message
 - Serial debugging
 - CAN bus monitoring
 
-## Future Scope
+Future Scope
 
 The prototype can be extended toward:
 
@@ -169,14 +169,12 @@ The prototype can be extended toward:
 - More sophisticated intrusion detection
 - Vehicle-level testing and validation
 
-## Project Status
+ Project Status
 
-**Current Stage:** Prototype Development
+Current Stage: Prototype Development
 
 CANShield is being developed as an educational proof-of-concept to demonstrate CAN message authentication and replay protection using embedded hardware.
 
-## Team
 
-Developed as an ECE / embedded cybersecurity project.
 
 
